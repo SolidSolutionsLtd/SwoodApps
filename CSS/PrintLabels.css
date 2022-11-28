@@ -1,0 +1,25 @@
+/* SSMClient: Solid Solutions */
+
+@page {
+      margin-top: 0mm;
+      margin-bottom: 0mm;
+      margin-left: 0mm;
+      margin-right: 0mm;
+      }
+
+/* @page {size: A4 Landscape;} */
+@page {size: A4 Portrait;}
+
+@media print {.grid-container {page-break-after: always;}}
+
+@media print {
+  * {
+        /* Force to print background image  */
+        -webkit-print-color-adjust: exact !important; /*Chrome, Safari */
+        color-adjust: exact !important;  /*Firefox*/
+      }
+    }
+
+  br{display: none;}
+
+  .grid-item {border: none;}  

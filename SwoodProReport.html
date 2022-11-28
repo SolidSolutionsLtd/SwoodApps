@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pro Report Releases</title>
+	<link rel="icon" type="image/png" href="Images/TabIcon.png"/>
+	<link href="CSS/SWOODReport.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" type="text/css" media="print" href="CSS/Print.css"/>
+	<script type="text/javascript" src="JS/jquery.js"></script>
+	<script type="text/javascript" src="JS/ReportHeader.js"></script>
+
+
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        li {
+            font-size: 0.8em;
+        }
+
+        ul li::before {
+            content: "\2022";
+            color: #edbc1a;
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        span.param {
+            display: inline-block;
+            margin: 0 3px;
+            padding: 1px 5px;
+            background: #242424;
+            border: 1px solid #4b4b4b;
+            border-radius: 3px;
+            color: #e3e3e3;
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+        var PrintReport = false;
+		ProjectName = 'List of Releases'
+		DataBasePath = "DataBase_SwoodProjects.js"
+		ResourcesPath = '.'
+		ProjectsPath = '#'
+		LabelsPath = '#'
+		BeamSawLabelsPath = '#'
+		PrintPath = '#'
+
+        WriteReportHeader('Releases') 
+    </script>
+
+
+<div id="PrintContainer">
+
+    <h3>V2.8.1</h3>
+    <h5>Requirements: Swood 2022 SP1.1</h5>
+    <ul>
+        <li>Format Tweaks</li>
+        <li>Machining cost for nested projects excludes panels with Z+</li>
+        <li>Changed to Home page code</li>
+        <li>Ability to check for updates. <span class="param">CheckForUpdates</span>=true</li>
+        <li>Link to Report Releases Page</li>
+        <li>Client custom .css files for SwoodDesign and Print</li>
+        <li>Panel properties merged with nested data in labels</li>
+        <li>Ability to change themes</li>
+        <li>Bug fix where frame cost was not calculated correctly in Frames table</li>
+        <li>Database post processor</li>
+    </ul>
+    
+    <h3>V2.8.0 </h3>
+    <ul>
+        <li>New Projects Page</li>
+        <li>Babylon files</li>
+        <li>Query strings for detailed pages</li>
+        <li>Bug fix where print headers was removing whitespaces like PanelDetails or NestingDetails</li>
+        <li>Bug fix wrong Edgeband calculation when a single program per sheet is used in nesting</li>
+        <li>Multibody dimensions like <span class="param">LengthWithEB</span> and <span class="param">LengthWithoutEB</span> are now the panel's Length dimension. Same for Width and Thickness</li>
+        <li>Ability to group Hardware by reference property <span class="param">GroupHardwareByReference</span>=true. Used for Handed Hardware</li>
+    </ul>
+
+    <h3>V2.7.6</h3>
+    <ul>
+        <li>Added the following properties for Nesting: <span class="param">UsedStockX</span>, <span class="param">UsedStockY</span>, <span class="param">UsedStockArea</span> , <span class="param">UsedStockAreaString</span></li>
+        <li>Bug fix where program indicator is not showed in nested details when using relative report</li>
+    </ul>
+
+    <h3>V2.7.5.1</h3>
+    <ul>
+        <li>Bug fix where table names where showing it's id when printing</li>
+        <li>Bug fix NestedPanel list was not being printed</li>
+    </ul>
+
+    <h3>V2.7.5</h3>
+    <ul>
+        <li>Bug fix where Frame comment does not show the first character</li>
+        <li>Curved Edges displayed as C, Undefined edgebands don't show a letter</li>
+        <li>Material Combine function in Summary is now checking for the materials CostType and UnitCost to know if they should be combined or not</li> 
+        <li>Added function to calculate time in seconds for machining costs in Summary</li>
+        <li>Fixed bug in FrameDetails.js to accurately group panels</li>
+    </ul>
+
+    <h3>V2.7.4</h3>
+    <ul>
+        <li><span class="param">ResourcesType</span> no longer in use, using boolean <span class="param">ResourcesRelative</span> to define relative report</li>
+        <li>Removed WEB Absolute and WEB Relative Folders. Now there is only WEB</li>
+        <li><span class="param">Scribe</span>=Yes property uses the Panel's Rough sizes as the Finished Sizes</li>
+    </ul>
+
+    <h3>V2.7.3</h3>
+    <ul>
+        <li>Ability to define Frame Details Panel table header</li>
+        <li>Ability to change table names in frame details list (Panels, Hardware and Programs)</li>
+        <li>Minor changes to take into account projects that work with panel configurations</li>
+        <li>Using Database Version: Pro 1.0.4</li>
+        <li>Removed unnecessary html headers from html files</li>
+        <li>Bug fix removed first page margin in print.css to fix issue where footer was not showing</li>
+    </ul>
+
+    <h3>V2.7.2</h3>
+    <ul>
+        <li>Ability to modify Page Names, Table Names and hide pages </li>
+        <li>Table names will be the same as the page name by default. Use <span class="param">ReportTableTitles</span> array to overwrite this</li>
+        <li>LengthLongestEdge is respected in Summary Page it cost type is Length</li>
+        <li>CombinedStocks now take into account laminates</li>
+    </ul>
+
+    <h3>V2.7.1</h3>
+    <ul>
+        <li>Fixed bug in Summary where Edgebang length was not being calculated properly</li>
+        <li>LengthLongestEdge now also applies to Laminates</li>
+        <li>Fixed bug program image reference issue in FrameDetails</li>
+        <li>Added <span class="param">FrameDetailsPanelPatch</span> and <span class="param">FrameDetailsHardwarePatch</span> functions</li>
+    </ul>
+
+    <h3>V2.7.0</h3>
+    <ul>
+        <li>Added Patch functions <span class="param">CombinedPanelPatch</span> and <span class="param">CombinedStockPatch</span></li>
+        <li>Fixed printing issue caused when Frame was being excluded</li>
+        <li><span class="param">ReportDebugMode</span>=true will open print without print preview. Setting is set as False by default</li>
+        <li>Uses configuration name on SourceName to make the name unique</li>
+        <li>Panel Length, Width and Thickness properties are used in Programs</li>
+        <li>Database Version: Pro 1.0.3</li>
+        <li>Change made to FrameDetails.js to fix issue where combined panels where not getting combined properly in Frames</li>
+        <li>Summary page processes Boards so it's able to obtain its properties</li>
+    </ul>
+
+    <h3>V2.6.6</h3>
+    <ul>
+        <li>Summary pages shows if report only contains hardware</li>
+        <li>Ability to group nested panels by machine name</li>
+        <li>Added <span class="param">SheetDataPatch</span> function to Patch file</li>
+        <li>Added <span class="param">EmptyCell</span> property to materials in summary page</li>
+        <li>Added <span class="param">MaterialsPostPatch</span> function</li>
+        <li>Fixed bug where Combined Stocks number was not counting properly (If using a different CombinedStockName than 'Combined Stock')</li>
+        <li>New <span class="param">ScrapPercentage</span> and <span class="param">UsedPercentage</span> Property for nested boards</li>
+        <li>Footer displays 'R' next to the report version to indicate a Relative Report</li>
+        <li>Ability to Change Columns in Summary for Edgebands using <span class="param">SummaryEdgebandColumns</span>. If not present, the default is to use the same as <span class="param">SummaryColumns</span></li>
+    </ul>
+
+    <h3>V2.6.5</h3>
+    <ul>
+        <li>Fixes to names and grouping programs</li>
+        <li>Ability to define Currency precision to Tables by using property <span class="param">precision</span>. Default is precision = 2</li>
+        <li>Ability to define Currency precision to Hardware table in Summary by using property <span class="param">precision</span>. Default is precision = 2</li>
+        <li><span class="param">DrawndBy</span> property added to Database</li>
+        <li><span class="param">ProjectNumber</span> property added to Database</li>
+        <li>New property: <span class="param">NameTrimStart</span> = Trims everything to the right of the last underscore in the filename</li>
+        <li>New property: <span class="param">NameTrimEnd</span> = Trims everything to the left of the first underscore in the filename</li>
+        <li>Ability to define column that contains the link</li>
+        <li>Ability to define precision in Summary for material quantity and cost</li>
+        <li>Ability to disable header sorter arrow using HeaderSort: false</li>
+        <li>New Panel and Program property <span class="param">EmptyCell</span>. Used to display empty cell in Frame Details Page</li>
+        <li>Rough sizes are now used to combine stocks instead of finished sizes</li>
+        <li>Property added to Edgebands in Database file <span class="param">IsCurved</span></li>
+        <li>Property added to Panels in Database file <span class="param">IsCurved</span></li>
+        <li>Property added to Programs in Database file <span class="param">ProgramAngleX</span></li>
+        <li>Property added to Programs in Database file <span class="param">ProgramZ</span></li>
+        <li>Curved Edgebands excluded from EBString and EBStringOrder</li>
+        <li>Solved issue where panels were not property grouped in the Stocks Page</li>
+        <li><span class="param">LongestEdge</span> is now <span class="param">LengthLongestEdge</span> and it is set to true by default</li>
+        <li>Frames can now be excluded. Information is now correct and does not break the report</li>
+        <li>Panels defined as Hardware will be treated as Hardware. Panel image will be generated and no panel detailed list will be generated</li>
+        <li>Swood Design Panel size properties are now available in Program object (<span class="param">LengthWithEB</span>, <span class="param">LengthWithoutEB</span>, <span class="param">RoughLength</span>)</li>
+        <li>Fixed bug wrong Frame Quantity calculation in Frame Details when using Project Quantity</li>
+        <li>Fixed bug where PanelData was getting processed twice in Frame Details</li>
+        <li>Ability to disable Print Header <span class="param">PrintHeader</span> = false</li>
+        <li>Ability to disable Company logo in print header <span class="param">PrintCompanyLogo</span> = false</li>
+    </ul>
+
+    <h3>V2.6.4</h3>
+    <ul>
+        <li>Added SelectToggle function to Table.js. The default groups was not working in the V2.6.3</li>
+        <li>Added <span class="param">PrintInfoPrefix</span> class to print header. This modifies ReportHeader.js and Print.css file</li>
+        <li>Ability to reverse EBString (2S 2L instead of 2L 2S) using <span class="param">EBStringReverse</span>=true</li>
+        <li>Fixed link between Nesting and panel details fixed</li>
+        <li>Ability to show/hide label image <span class="param">ShowLabelImage</span>=true</li>
+        <li>Ability to Combine Programs (<span class="param">CombinePrograms</span>=true)</li>
+        <li>Fixed issue where Frame details would fails if <span class="param">SortByPanelFrame</span> was not defined</li>
+        <li>Added fixes and defaults to PrintReport.js</li>
+        <li>Added CombineID to ProgramData in Database.js and to Programs in Report.cfg</li>
+    </ul>
+
+    <h3>V2.6.3</h3>
+    <ul>
+       <li>Warning messages when properties are missing are now handled differently</li>
+       <li>Added <span class="param">NestingNumber</span> to Database</li>
+       <li>Included Macros in DAT folder</li>
+    </ul>
+
+    <h3>V2.6.2</h3>
+    <ul>
+        <li>Ability to define default grouping for pages</li>
+        <li>Ability to group when printing</li>
+        <li>Warning messages if images or detailed pages are not created</li>
+        <li>Changes to how nesting Quantities are calculated</li>
+        <li>Changed condition for IMGPANELVIEWS to avoid creating images for non panel components. from CONDITION=NOT(TOTYPE='HARDWARE')AND(NOT(Exclude)) to CONDITION=(PANEL)AND(NOT(Exclude))</li>
+        <li>Handles missing properties and sets default values</li>
+    </ul>
+
+    <h3>V2.6.1</h3>
+    <ul>
+        <li>"Programs" tab is now "Program Detailed List"</li>
+        <li>"Programs" tab is now a table. Can be grouped by Frame or Machine</li>
+        <li>Ability to group panel detailed list by Frame</li>
+        <li>Removed check EB_LSTOCK<>0 from database because edgebands that are not Front, Back, Left or Right dont have EB_LSTOCK. Was causing odd angled Edgebands to not appear in report</li>
+    </ul>
+
+    <h3>V2.6.0</h3>
+    <ul>
+        <li>"Nesting" tab is now "Nesting Detailed List"</li>
+        <li>"Nested Panels" tab is now "Nesting"</li>
+        <li>Ability to group Nesting by sheet</li>
+        <li>Changes to nesting grouping functions</li>
+        <li>Panel Properties merged with Nesting panels</li>
+        <li>Ability to use Type: "currency" in Panel list of "Nesting Details" Tab</li>
+        <li>Ability to use Type: "currency" in labels</li>
+    </ul>
+
+    <h3>V2.5.2</h3>
+    <ul>
+        <li>Ability to use formatters in ReportSettings file</li>
+        <li>Summary now uses Rough Dimensions (includes stock extension)</li>
+        <li>New <span class="param">EBStringSeparator</span> property to define how EB abbreviation is separated</li>
+        <li>ProgramColumns is now ProgramListColumns in ReportSettings.js</li>
+        <li>Changes to Home.html to fix TopLevel functionality</li>
+    </ul>
+
+    <h3>V2.5.1</h3>
+    <ul>
+        <li>Comments can now use any character. Invalid character message removed</li>
+        <li>Added <span class="param">CommentsCp</span> property. Uses "Comments" from Custom Properties</li>
+        <li>Ability to group Program Detailed List by frame</li>
+    </ul>
+        
+    <h3>V2.05</h3>
+    <ul>
+        <li><span class="param">UseTopLevelProperties</span> added</li>
+        <li>Changed to Database.js to use «»</li>
+        <li>Home page code changed to allow TopLevel models</li>
+        <li>Fixed how summary comments are processed to avoid a <br> at the end</li>
+    </ul>
+
+    <h3>V2.04</h3>
+    <ul>
+        <li>Ability to customize report header and info displayed in home page</li>
+        <li>Sorted issue where Spindle tools were not showing up in programs tab</li>
+        <li>Ability to show Machining Costs</li>
+        <li>Database.js now uses javascript encoding to avoid invalid character issues</li>
+        <li>Company logo added to top left of print pages</li>
+    </ul>
+
+    <h3>V2.03</h3>
+    <ul>
+        <li>Ability to save multisheet drawing in a single PDF file</li>
+        <li>Message if Panel materials does not exist in the materials library</li>
+        <li>Ability to change horizontal alignment in Nesting tab</li>
+        <li>Ability sort Panels in "Frame Details" different to the "Panels" tab</li>
+        <li>Fixed Nested Board Description issue in Summary page</li>
+        <li>Changes to calculation of nested quantity </li>
+        <li>Added Labour Costs property. Used to add costs in summary</li>
+        <li>Fixed issue with edgeband abbreviation for multibody panels</li>
+        <li>Added <span class="param">Purchased</span> property to Hardware</li>
+    </ul>
+
+    <h3>V2.02</h3>
+    <ul>
+        <li>Ability to customize nested sheets Page</li>
+        <li>Ability to hide or show the tool list in nested Page</li>
+        <li>Format time function</li>
+        <li>Ability to change Combined default names</li>
+        <li>Ability to group the nested panels in the Nesting Details Page</li>
+        <li>Ability to use styles in labels</li>
+        <li>Ability to add prefix to labels</li>
+        <li>Updated messages to check if panel fits in board</li>
+        <li>Menu.js uses ((TOTYPES)CONTAINS'HARDWARE')AND(NOT(Exclude))</li>
+        <li>Changes to Labels.css to fix printing issues</li>
+        <li>DataBase.js moved to JS Clients folder</li>
+        <li>NOT((TOTYPES)CONTAINS'HARDWARE' to Panels and Profiles loop in DataBase and Menu</li>
+        <li>((TOTYPES)CONTAINS'EXCLUDED' to Excluded page and Menu</li>
+        <li>Print.css file updated to fix Frame print issue that separated image from list</li>
+        <li>Ability to set styles in Frame details page </li>
+        <li>Frame cost properties:  MaterialCost, HardwareCost, TotalCost</li>
+        <li>Individual panel cost properties: CoreCost, EBCost, LAMCost, TotalCost</li>
+        <li>Edgebanding abbreviations </li>
+        <li>Ability to group by Hardware Type</li>
+        <li>SwoodDesign, SwoodCam, SwoodNesting Properties</li>
+        <li>Message if name starts with space character</li>
+    </ul>
+
+</div>
+
+<script>    
+    var elements = document.getElementsByClassName('Report_Header_Labels')
+
+    for (var i = 0; i < elements.length; i++){
+        elements[i].style.display = "none";
+    }
+</script>
+
+</body>
+</html>
