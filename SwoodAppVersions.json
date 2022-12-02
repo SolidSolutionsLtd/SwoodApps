@@ -3,5 +3,10 @@
     {
       "Version": "2.8.3",
       "ReleaseDate": "28/11/22"
+    },
+  "SwoodEditor": 
+    {
+      "Version": "0.0.1",
+      "ReleaseDate": "02/12/22"
     }
 }

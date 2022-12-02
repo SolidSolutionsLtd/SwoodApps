@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Swood Apps</title>
+	<title>Swood Editor</title>
 	<link rel="icon" type="image/png" href="Images/TabIcon.png"/>
 	<link href="CSS/SWOODReport.css" rel="stylesheet" type="text/css"/>
 	<link rel="stylesheet" type="text/css" media="print" href="CSS/Print.css"/>
 	<script type="text/javascript" src="JS/jquery.js"></script>
 	<script type="text/javascript" src="JS/ReportHeader.js"></script>
-	<script type="text/javascript" src="JS/Menu.js"></script>
 
 
     <style>
@@ -17,23 +16,6 @@
 
         li {
             font-size: 0.8em;
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-            cursor: pointer;
-        }
-
-        a:visited,
-        a:hover {
-            text-decoration: none;
-            color: white;
-        }
-
-        a:hover {
-            text-decoration: none;
-            color: rgb(156, 154, 154);
         }
 
         ul li::before {
@@ -64,26 +46,32 @@
 
     <script>
         var PrintReport = false;
-		ProjectName = ''
-		DataBasePath = ""
+		ProjectName = 'Release Notes'
+		DataBasePath = "DataBase_SwoodProjects.js"
 		ResourcesPath = '.'
 		ProjectsPath = '#'
 		LabelsPath = '#'
 		BeamSawLabelsPath = '#'
 		PrintPath = '#'
 
-        WriteReportHeader('Swood Apps') 
+        WriteReportHeader('Releases') 
     </script>
 
 
 <div id="PrintContainer">
 
-    <h3>Swood Apps</h3>
+    <h3>v0.0.1</h3>
     <ul>
-        <li><a href="SwoodReport.html">Swood Report</a></li>
-        <li><a href="SwoodEditor.html">Swood Editor</a></li>
+        <li>Improvement to how data is imported</li>
+        <li>Notification when Dat folder being edited is different to the one specified in SolidWorks</li>
+        <li>Ability to define Program Images</li>
     </ul>
-    
+
+    <h3>v0.0.0</h3>
+    <ul>
+        <li>Initial Release</li>
+    </ul>
+
 </div>
 
 <script>    
