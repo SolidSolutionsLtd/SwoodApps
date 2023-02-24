@@ -1,12 +1,12 @@
 {
   "SwoodReport": 
     {
-      "Version": "2.8.5",
-      "ReleaseDate": "13/01/23"
+      "Version": "2.8.6",
+      "ReleaseDate": "17/02/23"
     },
   "SwoodEditor": 
     {
-      "Version": "0.0.3",
-      "ReleaseDate": "14/12/22"
+      "Version": "0.0.4",
+      "ReleaseDate": "17/02/23"
     }
 }
