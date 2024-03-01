@@ -76,6 +76,28 @@
 
 <div id="PrintContainer">
 
+    <h3>v2.9.2</h3>
+    <h1 class="Date">Release Date: 01/03/2024</h1>
+    <ul>
+        <li>Ability to show SubFrames <x-pro>Pro</x-pro></li>
+        <li>Ability to show layers, laminates, edgebands and panel process in program detailed page</li>
+        <li>Summany page now shows when only programs exists</li>
+        <li>Edgebands now sorted by banding order instead of feature order. <span class="param">EBStringReverse</span> property is now only used to reverse the order of EBString (display 2S2L instead of 2L2S)</li>
+        <li>Now requires .net 8.0</li>
+        <li>New print method to avoid blank pages <x-pro>Pro</x-pro></li>
+        <li>Fixed bug where report is black when using Multi-Stock panels</li>
+        <li>Added options to show panel properties in Program Details page: <span class="param">ProgramDetailsShowLayers</span>, <span class="param">ProgramDetailsShowLaminates</span>, <span class="param">ProgramDetailsShowEdgebands</span>, <span class="param">ProgramDetailsShowPanelProcess</span></li>
+    </ul>
+
+    <h3>v2.9.1</h3>
+    <h1 class="Date">Release Date: 01/02/2024</h1>
+    <ul>
+        <li>Ability to not show hardware and programs in Frame Details Page by not providing columns to display</li>
+        <li>Added Description property to projects</li>
+        <li>Added part custom properties to programs and nested parts</li>
+
+    </ul>
+
     <h3>v2.9.0</h3>
     <h1 class="Date">Release Date: 18/10/2023</h1>
     <ul>
@@ -96,7 +118,8 @@
 
         <h4>Known Bugs</h4>
         <ul>
-            <li>Print is blank randomly when using Print All button <x-pro>Pro</x-pro> </li>
+            <li>Print is blank randomly when using Print All button <x-pro>Pro</x-pro></li>
+            <li>Blank report when using Multi-Stock panels</li>
         </ul>
 
     </ul>
