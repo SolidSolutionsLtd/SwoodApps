@@ -1,3 +1,9 @@
 {
-    "liveServer.settings.port": 5502
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"files.associations": {
+		// "Database.js": "ignore"
+	},
+	"liveServer.settings.port": 5502,
+	"cSpell.words": ["Edgeband", "Edgebands", "Swood"]
 }

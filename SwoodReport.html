@@ -53,6 +53,10 @@
         h4{
             margin-bottom: 3px;
         }
+
+        .red{
+            color: rgb(184, 0, 0)
+        }
         
     </style>
 
@@ -75,6 +79,86 @@
 
 
 <div id="PrintContainer">
+
+    <h3>v2.10.0</h3>
+    <h1 class="Date">Release Date: 20/08/2024</h1>
+    <h5>Requirements: Swood 2024 SP0.0 or newer</h5>
+    <h5 class="red">This version introduces breaking changes for reports that generate labels images. Please contact support before upgrading.</h5>
+    <ul>
+        <li>New Cutting Pattern pages</li>
+        <li>Board Estimation has been retired and replaced by Cutting Pattern</li>
+        <li>New Labels layout</li>
+        <li>Ability to create Frame Labels <x-pro>Pro</x-pro></li>
+        <li>New Edgebands Page</li>
+        <li>New Laminates Page</li>
+        <li>New SubFrame Details page <x-pro>Pro</x-pro></li>
+        <li>New Raw Data Viewer</li>
+        <li>New Barcode formats for labels <x-pro>Pro</x-pro></li>
+        <li>Ability to concatenate and evaluate properties in main tables and labels <x-pro>Pro</x-pro> «Length» «EVAL(«Length»*«Width»)»</li>
+        <li>Changes to ensure 3D models are loaded</li>
+        <li>Ability to print any page order, any quantity. Print Quantity no longer in use</li>
+        <li>Ability to group Nested Panels table by Parent Project</li>
+        <li>Ability to define different settings for nested panel labels</li>
+        <li>Ability to define different settings for BeamSaw labels</li>
+        <li>Custom property comments and Summary are now merged into a single property</li>
+        <li>Added warning messages for material and edgeband names with leading or trailing space characters</li>
+        <li>Now using LabelsSortBy if it exists(not for nest projects)</li>
+        <li>fixed ProgramNameList not displaying correctly</li>
+        <li>fixed ProgramFileNameList not displaying correctly</li>
+        <li>fixed PanelProcess not displaying correctly</li>
+        <li>Added BeamSawColumns and SortByBeamSaw <x-pro>Pro</x-pro> </li>
+        <li>Ability to define a BeamSaw panel by adding an extended material property of BeamSaw = True <x-pro>Pro</x-pro></li>
+        <li>Added report property - <span class="param">ImageRotateAngle</span> used for Panels and Programs to rotate images in Labels and Detail Pages</li>
+        <li>Added report property - <span class="param">HasPanelProcess</span></li>
+        <li>Added report Property - <span class="param">PanelProcessNameList</span></li>
+        <li>Ability to group Frames by "Frame Type" custom property</li>
+        <li>Ability to disable "Clean Database" in Database Post</li>
+        <li>Fixed report now date/time</li>
+        <li>Report RunTime now written back to the database</li>
+        <li>[[HTML changed to [[TEMPLATE</li>
+        <li>HTMLSRC changed to TEMPLATESRC</li>
+        <li>Added to Database - MaterialData and extended properties</li>
+        <li>Added to Database - EdgebandData and extended properties</li>
+        <li>Added to Database - guids to NestedSheetData</li>
+        <li>Added to Database - <span class="param">WastedArea</span></li>
+        <li>Added to Database - <span class="param">SurfaceSheet</span></li>
+        <li>Added to Database - <span class="param">SurfaceParts</span></li>
+        <li>Added to Database - <span class="param">SurfaceScraps</span></li>
+        <li>Added to Database - <span class="param">WastedArea</span></li>
+        <li>Added to Database - <span class="param">NumberOfParts</span></li>
+        <li>Added to Database - <span class="param">NumberOfOffcuts</span></li>
+        <li>Added to Database - <span class="param">OffcutArea</span></li>
+        <li>Added to Database - <span class="param">EncodingError</span></li>
+        <li>Added to Database - <span class="param">RebuildError</span></li>
+        <li>Added to Database - <span class="param">SwoodReportVersion</span></li>
+        <li>Added to Database - <span class="param">ProgramOffcutsUsed</span></li>
+        <li>Added to Database - <span class="param">Frame PanelCount</span></li>
+        <li>Added to Database - <span class="param">Frame HardwareCount</span></li>
+        <li>Added to Database - <span class="param">Frame FrameDimension</span></li>
+        <li>Added to Database - <span class="param">MaterialId</span></li>
+        <li>Added to Database - <span class="param">SummaryAuthor</span></li>
+        <li>Added to Database - <span class="param">SummaryKeywords</span></li>
+        <li>Added to Database - <span class="param">SummarySubject</span></li>
+        <li>Added to Database - <span class="param">SummaryTitle</span></li>
+        <li>Added to Database - <span class="param">MaterialId</span></li>
+        <li>Added to Database - <span class="param">CreatedDate</span></li>
+        <li>Added to Database - <span class="param">LastSavedDate</span></li>
+        <li>Added to Database - <span class="param">LastSavedBy</span></li>
+        <li>Added to Database - <span class="param">ParentDescription</span></li>
+        <li>Added to Database - <span class="param">NestingOffcutAreaRatio</span></li>
+        <li>Added to Database - <span class="param">NestingScrapsAreaRatio</span></li>
+        <li>Added to Database - <span class="param">NestingWasteAreaRatio</span></li>
+        <li>Added to Database - <span class="param">ProgramDirectory</span></li>
+        <li>Added to Database - <span class="param">ProgramFullPath</span></li>
+        <li>Added to Database - <span class="param">Parent</span></li>
+        <li>Added to Database - <span class="param">ParentIndex</span></li>
+        <li>Added to Database - <span class="param">ParentName</span></li>
+        <li>Added to Database - <span class="param">ParentConfiguration</span></li>
+        <li>Added to Database - <span class="param">ParentSourceName</span></li>
+        <li>Added to Database - <span class="param">ParentPath</span></li>
+    </ul>
+    
+</li>
 
     <h3>v2.9.2</h3>
     <h1 class="Date">Release Date: 01/03/2024</h1>
